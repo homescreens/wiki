@@ -1,62 +1,92 @@
+---
+---
+
+$width: 960px;
+$breakpoint: 720px; // for small screens
+
+$margin: 1.4em;
+$small_margin: 1em;
+
+$nav_bg: #789fda;
+$header_bg: #eef2ff;
+$body_bg: #F9F9F9;
+$body_color: #444;
+
 html, body {
 	margin: 0;
 	padding: 0;
 
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
-	background: #F9F9F9;
-	color: #666;
+	background: $body_bg;
+	color: $body_color;
+	line-height: 1.6em;
 }
 
 nav {
-	background: #789fda;
-	padding: 1.2em 1.6em;
+	background: $nav_bg;
+	padding: $margin;
 
 	color: #fff;
-}
 
-nav div {
-	display: flex;
-	align-items: center;
-}
+	div {
+		display: flex;
+		align-items: center;
+	}
 
-nav a {
-	color: inherit;
-	text-decoration: none;
-	font-weight: bold;
+	a {
+		color: inherit;
+		text-decoration: none;
+		font-weight: bold;
 
-	margin-right: 1.2em;
-}
+		margin-right: 1.2em;
+	}
 
-nav a.ILL-DO-THE-LOGO {
-	flex: 1;
-	font-size: 1.25em;
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a.ILL-DO-THE-LOGO {
+		flex: 1;
+		font-size: 1.25em;
+	}
 }
 
 header {
-	background: #eef2ff;
-	padding: 1.4em;
+	background: $header_bg;
+	padding: ($margin - 0.4em) $margin;
 
 	color: #515151;
-}
 
-header h1, header h2 {
-	margin: 0.2em 0;
-}
+	h1, h2 {
+		margin: 0.4em 0;
+	}
 
-header h2 {
-	font-weight: normal;
+	h2 {
+		font-weight: normal;
+	}
 }
 
 nav > div,
 header > div,
 #content > div {
-	max-width: 960px;
+	max-width: $width;
 	margin: 0 auto;
 }
 
 #content {
-	padding: 1.4em;
+	padding: $margin;
+}
+
+// shrink margins on small screens
+@media (max-width: $breakpoint) {
+	nav, #content {
+		padding: $small_margin;
+	}
+
+	header {
+		padding: ($small_margin - 0.4em) $small_margin;
+	}
 }
 
 h1 {
@@ -66,3 +96,4 @@ h1 {
 h2 {
 	font-size: 1.16em;
 }
+

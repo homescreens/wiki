@@ -1,2 +1,5 @@
 name: homescreens.org wiki
 description: homescreens wiki - ricing guide
+
+sass:
+  style: compact
