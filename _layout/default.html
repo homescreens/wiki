@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	<title>{{ site.name }}</title>
+	<meta name="description" content="{{ site.meta_description }}">
+
+	<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+	<nav>
+		<div>
+			<a href="/wiki/" class="ILL-DO-THE-LOGO">homescreens</a>
+			<a href="/wiki/ricing.html">ricing guide</a>
+			<a href="/">back to gallery showcase thing</a>
+		</div>
+	</nav>
+
+	<header>
+		<div>
+			<h1>{{ page.title }}</h1>
+			{% if page.description %}<h2>{{ page.description }}</h2>{% endif %}
+		</div>
+	</header>
+
+	<main id="content">
+		<div>
+			{{ content }}
+		</div>
+	</main>
+
+</body>
+</html>
