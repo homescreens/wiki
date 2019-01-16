@@ -75,16 +75,16 @@ header > div,
 }
 
 #content {
-	padding: $margin;
+	padding: ($margin - 0.4em) $margin;
 }
 
 // shrink margins on small screens
 @media (max-width: $breakpoint) {
-	nav, #content {
+	nav {
 		padding: $small_margin;
 	}
 
-	header {
+	header, #content {
 		padding: ($small_margin - 0.4em) $small_margin;
 	}
 }
@@ -94,6 +94,5 @@ h1 {
 }
 
 h2 {
-	font-size: 1.16em;
+	font-size: 1.2em;
 }
-
